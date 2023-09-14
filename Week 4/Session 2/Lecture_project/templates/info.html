@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Information</h1>
+    {{value_list}}
+    {% for item in value_list %}
+        <p><b>Name:</b> {{item['name']}} | <b>Email:</b> {{item['email']}}</p>
+    {% endfor %}
+    <a href="/">Back to form.</a>
+</body>
+</html>
