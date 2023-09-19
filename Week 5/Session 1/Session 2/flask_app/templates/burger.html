@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3><a href="/">Back</a></h3>
+    <p>
+        <b>ID: </b>{{burger.id}}
+        <br>
+        <b>Name: </b>{{burger.name}}
+        <br>
+        <b>Bun: </b>{{burger.bun}}
+        <br>
+        <b>Meat: </b>{{burger.meat}}
+        <br>
+        <b>Calories: </b>{{burger.calories}}
+        <br>
+        <b>Created at: </b>{{burger.created_at}}
+        <br>
+        <b>Updated at: </b>{{burger.updated_at}}
+    </p>
+    <a href="/delete/{{burger.id}}">Delete Burger</a>
+</body>
+</html>

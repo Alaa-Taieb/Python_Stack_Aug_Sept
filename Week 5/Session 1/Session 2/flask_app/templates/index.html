@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Create a Burger</h1>
+    <form action="/burgers" method="post">
+
+        <input type="text" name="name" id="" placeholder="Burger Name">
+        <br>
+        <input type="text" name="bun" id="" placeholder="Burger Bun Type">
+        <br>
+        <input type="text" name="meat" id="" placeholder="Burger Meat">
+        <br>
+        <input type="number" name="calories" id="" min="0">
+
+        <br>
+
+        <button type="submit">Create</button>
+    </form>
+
+    <h2>Burgers List</h2>
+    <ul>
+        {% for burger in burgers %}
+            <li><a href="/details/{{burger.id}}">{{burger.name}}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
