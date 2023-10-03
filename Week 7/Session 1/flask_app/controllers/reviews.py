@@ -45,3 +45,14 @@ def delete(id):
 def show_review(id):
     review = Review.get_by_id({'id': id})
     return render_template("show_review.html", review = review)
+
+@app.route('/review/<int:id>/like')
+def like(id):
+    Review.add_user_like({'users_id': session['user_id'] , 'reviews_id': id})
+    return redirect('/dashboard')
+
+@app.route('/review/<int:id>/dislike')
+def dislike(id):
+    print({'users_id': session['user_id'] , 'reviews_id': id})
+    Review.remove_user_like({'users_id': session['user_id'] , 'reviews_id': id})
+    return redirect('/dashboard')
