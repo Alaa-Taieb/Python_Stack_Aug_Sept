@@ -1,0 +1,9 @@
+https://api.publicapis.org/entries - Random Free No Key Apis
+
+https://restcountries.com/v3.1/name/{country} - Country Information
+
+https://api.thedogapi.com/v1/images/search - Dog Pictures
+
+https://catfact.ninja/fact - Cat Facts
+
+http://numbersapi.com/random/math - Random Math number facts

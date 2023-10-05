@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.button_container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    
+}
+
+.big_button{
+    flex: 1;
+    height: 100%;
+    background-color: aqua;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#first_button {
+    background-image: url(assets/first_button_background_image.png);
+    background-repeat:no-repeat;
+    background-size: cover;
+}
+
+#second_button {
+    background-size: contain;
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-image: url(assets/second_button_background_image.jpeg);
+}
+
+.black_tint {
+    background-color: black;
+    position: absolute;
+    width: 50%;
+    height: 100vh;
+    opacity: 0.8;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.big_button a{
+    font-size: 3rem;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    z-index: 2;
+    padding: 10px 20px;
+    border: 2px solid white;
+    border-radius: 30px;
+    background-color: rgba(0, 0, 0, 0);
+    transition: all 0.2s ease-in-out;
+    text-align: center;
+}
+
+.big_button a:hover{
+    background-color: white;
+    color: black;
+}
+
+.option {
+    display: flex;
+    padding: 5px;
+    justify-content: space-between;
+    font-weight: bold;
+    z-index: 2;
+}
+
+#country_part_container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    justify-content: center;
+}
+
+#select_country {
+    z-index: 2;
+    padding: 20px;
+
+}
+
+.option img{
+    width: 50px;
+    height: 30px;
+}
