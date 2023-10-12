@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <title>Dashboard</title>
+</head>
+<body>
+    
+    <header class="container d-flex justify-content-between align-items-center">
+        <h1 class="w-75">Welcome {{user.first_name}}!</h1>
+
+        <div class="container d-flex justify-content-between w-25 align-items-center">
+            <a href="/dashboard" class="btn btn-primary">Dashboard</a>
+            <a href="/logout" class="btn btn-danger">Logout</a>
+        </div>
+    </header>
+
+    <main class="container">
+        <h2>{{recipe.name}}</h2>
+        <table>
+            <tr>
+                <td>Description:</td>
+                <td>{{recipe.description}}</td>
+            </tr>
+            <tr>
+                <td>Under 30 Minutes:</td>
+                <td>{% if recipe.under_30 == 1 %} YES {% else %} NO {% endif %}</td>
+                <td>{{"YES" if recipe.under_30 == 1 else "NO" if recipe.under_30 == 0 }}</td>
+            </tr>
+            <tr>
+                <td>Instructions:</td>
+                <td>{{recipe.instructions}}</td>
+            </tr>
+            <tr>
+                <td>Date Made:</td>
+                <td>{{recipe.date}}</td>
+            </tr>
+
+        </table>
+    </main>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+</body>
+</html>
